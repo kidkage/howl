@@ -85,6 +85,14 @@ function makePost(post) {
 
 const list = document.querySelector("#post-list");
 const emptyState = document.querySelector("#empty-state");
+const colorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+function applySystemColorScheme() {
+  document.documentElement.dataset.theme = colorScheme.matches ? "dark" : "light";
+}
+
+applySystemColorScheme();
+colorScheme.addEventListener("change", applySystemColorScheme);
 
 export function renderPosts(postItems) {
   list.replaceChildren();
