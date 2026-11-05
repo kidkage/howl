@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Howl design system showcase with light and dark tokens and WCAG contrast measurements." />
+    <title>Howl — Design system</title>
+    <link rel="stylesheet" href="./showcase.css" />
+    <script type="module" src="./showcase.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">Design system · Round 02B, Bigger Beat</p>
+          <h1 class="wordmark">Howl</h1>
+          <p class="lede">A lively violet mark and calm, readable campus stories. Built from the chosen direction: Georgia for expressive headlines, Arial for clear UI and story text, airy spacing, small circles, and quiet separators.</p>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">Switch to dark mode</button>
+      </header>
+
+      <nav class="section-nav" aria-label="Design system sections">
+        <a href="#colors">Colors</a>
+        <a href="#type">Typography</a>
+        <a href="#spacing">Spacing</a>
+        <a href="#components">Components</a>
+        <a href="#contrast">Contrast check</a>
+      </nav>
+
+      <p class="eyebrow" id="mode-label" aria-live="polite">Light mode</p>
+
+      <section id="colors">
+        <h2 class="section-heading">Color tokens</h2>
+        <p class="section-description">The Howl accent stays exactly <code>#c524ff</code>. Mode changes are semantic role tokens; the original slate, white reading surface, near-black copy, muted metadata, pale dividers, and soft avatar tints remain in the palette.</p>
+        <div class="panel">
+          <div class="swatch-grid" id="token-swatches"></div>
+          <p class="footnote"><span id="mode-label-footnote"></span> Named role tokens: <code>page</code>, <code>surface</code>, <code>surface-muted</code>, primary/secondary text, link, accent, borders, controls, and focus.</p>
+        </div>
+      </section>
+
+      <section id="type">
+        <h2 class="section-heading">Type styles</h2>
+        <p class="section-description">Georgia headlines pair with Arial controls and the selected 19px story-copy scale.</p>
+        <div class="panel type-samples">
+          <div class="type-row"><p class="type-label">Display · Georgia · 36px / 1.2</p><p class="sample-display">Howl is open</p></div>
+          <div class="type-row"><p class="type-label">Section heading · Georgia · 24px / 1.2</p><h3 class="sample-heading">Stories from campus</h3></div>
+          <div class="type-row"><p class="type-label">Story · Arial · 19px / 1.5</p><p class="sample-story">A quiet spot in Hunt Library turned into three focused hours. A small campus miracle.</p></div>
+          <div class="type-row"><p class="type-label">Body · Arial · 16px / 1.5</p><p class="sample-body">The feed is airy and straightforward so student stories take the lead.</p></div>
+          <div><p class="type-label">Metadata · Arial · 13px / 1.5</p><p class="sample-caption">Maya R. · The Brickyard · just now</p></div>
+        </div>
+      </section>
+
+      <section id="spacing">
+        <h2 class="section-heading">Spacing and shape</h2>
+        <p class="section-description">A consistent 4px base, soft 4px and 8px corners, round avatars, and restrained layered shadows.</p>
+        <div class="panel spacing-list">
+          <div class="spacing-row"><code>space-0</code><span class="spacing-bar spacing-zero"></span><code>0</code></div>
+          <div class="spacing-row"><code>space-1</code><span class="spacing-bar" data-spacing="space-1"></span><code>4px</code></div>
+          <div class="spacing-row"><code>space-2</code><span class="spacing-bar" data-spacing="space-2"></span><code>8px</code></div>
+          <div class="spacing-row"><code>space-3</code><span class="spacing-bar" data-spacing="space-3"></span><code>12px</code></div>
+          <div class="spacing-row"><code>space-4</code><span class="spacing-bar" data-spacing="space-4"></span><code>16px</code></div>
+          <div class="spacing-row"><code>space-5</code><span class="spacing-bar" data-spacing="space-5"></span><code>20px</code></div>
+          <div class="spacing-row"><code>space-6</code><span class="spacing-bar" data-spacing="space-6"></span><code>24px</code></div>
+          <div class="spacing-row"><code>space-8</code><span class="spacing-bar" data-spacing="space-8"></span><code>32px</code></div>
+          <div class="spacing-row"><code>space-10</code><span class="spacing-bar" data-spacing="space-10"></span><code>40px</code></div>
+          <div class="spacing-row"><code>space-12</code><span class="spacing-bar" data-spacing="space-12"></span><code>48px</code></div>
+          <div class="spacing-row"><code>space-16</code><span class="spacing-bar" data-spacing="space-16"></span><code>64px</code></div>
+          <div class="shape-grid">
+            <div class="shape-sample radius-small"><strong>radius-small</strong><code>4px</code></div>
+            <div class="shape-sample radius-card"><strong>radius-card</strong><code>8px</code></div>
+            <div class="shape-sample radius-pill"><strong>radius-pill</strong><code>999px</code></div>
+            <div class="shape-sample shadow-card"><strong>shadow-card</strong><code>0 4px 16px / 8%</code></div>
+            <div class="shape-sample shadow-raised"><strong>shadow-raised</strong><code>0 8px 24px / 12%</code></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="components">
+        <h2 class="section-heading">Component examples</h2>
+        <p class="section-description">Touch-friendly controls, selected states, small circular avatars, field borders, and focus rings.</p>
+        <div class="component-grid">
+          <article class="panel component-card">
+            <h3>Button state gallery</h3>
+            <div class="button-row"><button type="button">Start a post</button><button type="button" class="button-hover">Hover</button><button type="button" class="button-pressed" aria-pressed="true">Pressed</button><button type="button" class="button-selected" aria-pressed="true">Going</button><button type="button" disabled>Unavailable</button></div>
+            <nav class="button-row" aria-label="Example feed tabs"><a href="#components" aria-current="page">For you</a><a href="#components">Following</a></nav>
+          </article>
+          <article class="panel component-card">
+            <h3>Write a post</h3>
+            <form class="compose-card" onsubmit="return false"><label class="field-label" for="compose-story">Tell campus what's happening</label><textarea id="compose-story" placeholder="A tiny campus moment worth sharing…"></textarea><div class="button-row"><button type="button">Share your story</button><button type="button" disabled>Post unavailable</button></div></form>
+          </article>
+          <article class="panel component-card">
+            <h3>Post card</h3>
+            <article class="post-card">
+              <header class="post-card-header"><span class="profile-picture" aria-label="Maya R. profile">MR</span><div><h4 class="post-card-title">Maya R.</h4><p class="event-meta">The Brickyard · just now</p></div></header>
+              <p class="post-card-copy">Someone brought a tiny dog to the Brickyard and it has completely improved my Tuesday.</p>
+              <div class="avatar-row" aria-label="Profile picture examples"><span class="avatar avatar-1" aria-label="Maya">MR</span><span class="avatar avatar-2" aria-label="Jordan">JL</span><span class="avatar avatar-3" aria-label="Chris">CW</span><span class="avatar avatar-4" aria-label="Avery">AT</span><span class="avatar avatar-5" aria-label="Sam">SP</span></div>
+              <div class="icon-row">
+                <button class="icon-button" type="button" aria-label="Comment on Maya's post"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H6l-3 2v-6a7.5 7.5 0 1 1 17-3.5Z"/></svg>Comment</button>
+                <button class="icon-button" type="button" aria-label="Share Maya's post"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 15V3m0 0L7 8m5-5 5 5"/><path d="M5 13v7h14v-7"/></svg>Share</button>
+              </div>
+            </article>
+          </article>
+          <article class="panel component-card">
+            <h3>Campus event</h3>
+            <article class="event-card">
+              <p class="eyebrow">On campus · This Friday</p>
+              <h4 class="event-title">Live music on the Brickyard</h4>
+              <p class="event-meta">5:30 PM · Bring a friend and stay awhile.</p>
+              <div class="button-row"><button type="button">I'm going</button><button type="button" class="button-selected" aria-pressed="true">You're going</button><button type="button" disabled>Event full</button></div>
+            </article>
+          </article>
+        </div>
+      </section>
+
+      <section id="contrast">
+        <h2 class="section-heading">WCAG AA contrast check</h2>
+        <p class="section-description">Measured with the WCAG 2.x sRGB relative-luminance formula. Text uses 4.5:1, large text and non-text UI use 3:1. Select the theme toggle to remeasure the live mode.</p>
+        <div class="contrast-intro"><p><strong>Initial failures and fixes:</strong> The exact Howl violet is preserved as the accent fill and large wordmark. For small text, a darker same-hue violet is used in light mode and a lighter same-hue violet in dark mode; dark violet ink is used on accent-filled controls. The final table below reports the post-fix measurements.</p></div>
+        <div class="contrast-table-wrap">
+          <table class="contrast-table">
+            <caption class="eyebrow" id="contrast-mode">Light mode measurements</caption>
+            <thead><tr><th scope="col">Location/state</th><th scope="col">Criterion</th><th scope="col">Text/icon</th><th scope="col">Background</th><th scope="col">Measured</th><th scope="col">Result</th></tr></thead>
+            <tbody id="contrast-results"></tbody>
+          </table>
+        </div>
+        <p class="footnote">This audit includes the rendered text, muted/placeholder labels, links, button default/hover/pressed/disabled states, icons, focus rings, field borders, selected markers, and all five avatar initials. Palette samples themselves contain no overlaid text.</p>
+        <h3 class="section-heading contrast-subheading">First-pass failures, before token fixes</h3>
+        <div class="contrast-table-wrap">
+          <table class="contrast-table">
+            <thead><tr><th scope="col">Location</th><th scope="col">Mode</th><th scope="col">Colors</th><th scope="col">First ratio</th><th scope="col">Fix</th></tr></thead>
+            <tbody id="initial-failures"></tbody>
+          </table>
+        </div>
+        <p class="footnote">Reproducible check: from the repository root run <code>node explorations/03-design-system/check-contrast.mjs</code>. The script measures every final pair in both modes and exits with an error on any failure.</p>
+      </section>
+
+      <footer class="site-footer">Howl visual direction: Round 02B, Bigger Beat. Previous exploration rounds and the real app are unchanged.</footer>
+    </main>
+  </body>
+</html>
