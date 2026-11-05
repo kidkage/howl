@@ -1,0 +1,40 @@
+html[data-version="a"] .theme-b .post-text {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+html[data-version="b"] .theme-b .post-text {
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.theme-b .post-like {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #686570;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.theme-b .post-like:hover {
+  background: transparent;
+  text-decoration: underline;
+}
+
+.theme-b .post-like[aria-pressed="true"] {
+  color: #54106f;
+}
+
+.theme-b .post-like svg {
+  width: 18px;
+  height: 18px;
+}
